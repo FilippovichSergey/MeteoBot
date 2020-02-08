@@ -7,17 +7,26 @@ public class Model {
 	private String icon;
 	private String description;
 	private Double windDirectionDouble;
-	
+	private Double speed;
+
+	public Model() {
+		super();
+	}
+
+	public Double getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(Double speed) {
+		this.speed = speed;
+	}
+
 	public Double getWindDirectionDouble() {
 		return windDirectionDouble;
 	}
 
 	public void setWindDirectionDouble(Double windDirectionDouble) {
 		this.windDirectionDouble = windDirectionDouble;
-	}
-
-	public Model() {
-		super();
 	}
 
 	public String getName() {

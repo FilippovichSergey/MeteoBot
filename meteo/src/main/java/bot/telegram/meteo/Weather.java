@@ -28,6 +28,7 @@ public class Weather {
         
         JSONObject wind = object.getJSONObject("wind");
         model.setWindDirectionDouble(wind.getDouble("deg"));
+        model.setSpeed(wind.getDouble("speed"));
         
         JSONArray getArray = object.getJSONArray("weather");
         for (int i = 0; i < getArray.length(); i++) {
@@ -42,7 +43,7 @@ public class Weather {
                 "Температура: " + model.getTemp() + "℃" + "\n" +
                 "Влажность: " + model.getHumidity() + "%" + "\n" +
                 "Облачность: " + model.getDescription() + "\n" +
-                "Ветер: " + windDirection.windDirection(model.getWindDirectionDouble()) + "\n" +
+                "Ветер: " + windDirection.windDirection(model.getWindDirectionDouble()) + " " + model.getSpeed() + " м/с\n" +
                 "http://openweathermap.org/img/w/" + model.getIcon() + ".png";
     }
 }
